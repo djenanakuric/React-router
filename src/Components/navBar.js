@@ -1,24 +1,31 @@
 import React from "react";
+import {Link, NavLink, withRouter} from 'react-router-dom';
 
-const NavBar = () => {
+
+const NavBar = (props) => {
+    console.log(props);
+    setTimeout( () => {
+        props.history.push('./about')
+    }, 2000)
     return (
         <nav className="ui raised very padded segment">
             <a className="ui teal inverted segment" >Gloria</a>
             <div className="ui right floated header">
                 <button className="ui button">
-                    <a href="/" >Home</a>
+                    <NavLink to="/" >Home</NavLink>
                 </button>
 
                 <button className="ui button">
-                    <a href="/about" >About</a>
+                    <NavLink to="/about" >About</NavLink>
                 </button>
 
                 <button className="ui button">
-                    <a href="/contact" >Contact</a>
+                    <NavLink to="/contact" >Contact</NavLink>
                 </button>
+
             </div>
         </nav>
     )
 }
 
-export default NavBar;
+export default withRouter(NavBar) ;
