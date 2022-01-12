@@ -7,17 +7,17 @@ import Contact from './Components/contact';
 
 function App() {
     return (
-        <BrowserRouter> 
-            <div className = "App">
+        <BrowserRouter>
+            <div className="App">
                 <NavBar />
                 <Routes>
-                    <Route path = "/" element = {<Home />} />
-                    <Route path = "/about" element = {<About />} />
-                    <Route path = "/contact" element = {<Contact/>} />  
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
                 </Routes>
-              
+
             </div>
-        </BrowserRouter> 
+        </BrowserRouter>
     );
 }
 
